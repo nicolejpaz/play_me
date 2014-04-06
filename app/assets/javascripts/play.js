@@ -139,6 +139,23 @@ var play = function(oscillator, keyCode) {
     case 9:
       console.log('muted')
       oscillator.frequency.value = 0
+      break
+    case 49:
+      console.log('sine')
+      oscillator.type = 0
+      break
+    case 50:
+      console.log('square')
+      oscillator.type = 1
+      break
+    case 51:
+      console.log('sawtooth')
+      oscillator.type = 2
+      break
+    case 52:
+      console.log('triangle')
+      oscillator.type = 3
+      break
     default:
       console.log(event.keyCode)
       break
