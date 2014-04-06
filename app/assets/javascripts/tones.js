@@ -9,9 +9,9 @@ $(document).on('keydown', function(event) {
   play(oscillator, event.keyCode)
 })
 
-// if the sustain checkbox is not checked, i.e. no sustain
-if (!$('#sustain').is(":checked")) {
-  $(document).on('keyup', function(event) {
+$(document).on('keyup', function(event) {
+  var sustainIsChecked = $('#sustain').is(":checked")
+  if (!sustainIsChecked) {
     oscillator.frequency.value = 0
-  })
-}
+  }
+})

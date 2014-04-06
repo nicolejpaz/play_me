@@ -1,4 +1,3 @@
-
 var play = function(oscillator, keyCode) {
   switch (keyCode) {
     case 81:
